@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prowadzenie danych</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2 class="form-title">Data management</h2>
+      <div class="form-input">
+        <label class="form-label" for="data1">Model or "random":</label>
+        <input class="form-text" type="text" id="data1" name="data1" placeholder="random">
+      </div>
+      <div class="form-input">
+        <label class="form-label" for="data2">Number of the npc:</label>
+        <input class="form-text" type="text" id="data2" name="data2" placeholder="1-15">
+      </div>
+      <div class="form-checkbox">
+        <input type="checkbox" id="check1" name="check">
+        <label for="check">Armed</label>
+      </div>
+      <div class="form-input">
+        <label class="form-label" for="data3">Weapon:</label>
+        <input class="form-text" type="text" id="data3" name="data3" placeholder="weapon_bat">
+      </div>
+      <div class="form-checkbox">
+        <input type="checkbox" id="check2" name="check" checked>
+        <label for="check">Combat</label>
+      </div>
+      <button class="form-button" type="submit" id="submitButton">Spawn</button>
+      <button class="form-button red" type="submit" id="submitButton2">Cancel</button>
+  </div>
+  <div class="form-container2">
+    <h2 class="form-title">NPC Menu</h2>
+      <div class="form-input">
+        <label class="form-label" for="data1">Animation - dist:</label>
+        <input class="form-text" type="text" id="data4" name="data4" placeholder="missminuteman_1ig_2">
+      </div>
+      <div class="form-input">
+        <label class="form-label" for="data2">Animation - anim</label>
+        <input class="form-text" type="text" id="data5" name="data5" placeholder="handsup_base">
+      </div>
+      <!-- <div class="form-checkbox">
+        <input type="checkbox" id="check2" name="check">
+        <label for="check">Change Combat</label>
+      </div> -->
+      <button class="form-button blue" type="submit" id="submitButton3">Animate</button>
+      <button class="form-button blue" type="submit" id="submitButton6">Follow</button>
+      <button class="form-button blue" type="submit" id="submitButton4">Delete</button>
+      <button class="form-button dark" type="submit" id="submitButton5">Kill NPC</button>
+      <button class="form-button red" type="submit" id="submitButton2">Cancel</button>
+  </div>
+
+  <script src="follow.js"></script>
+</body>
+</html>

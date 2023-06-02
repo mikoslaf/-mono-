@@ -1,0 +1,4 @@
+D:\Moje Dokumenty\fivem\Localhost\txData\QBCoreFramework_6DCC9D.base\resources\[praca]\[testy]\output\c_follow_mn2.net.dll
+D:\Moje Dokumenty\fivem\Localhost\txData\QBCoreFramework_6DCC9D.base\resources\[praca]\[testy]\c_follow_mn2\obj\Debug\c_follow_mn2.csproj.AssemblyReference.cache
+D:\Moje Dokumenty\fivem\Localhost\txData\QBCoreFramework_6DCC9D.base\resources\[praca]\[testy]\c_follow_mn2\obj\Debug\c_follow_mn2.csproj.CoreCompileInputs.cache
+D:\Moje Dokumenty\fivem\Localhost\txData\QBCoreFramework_6DCC9D.base\resources\[praca]\[testy]\c_follow_mn2\obj\Debug\c_follow_mn2.net.dll
