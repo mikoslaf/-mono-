@@ -23,7 +23,7 @@ document.getElementById("submitButton").addEventListener("click", function(event
   let weapon = document.getElementById("data3").value;
 
   $(".form-container").css({"display":"none"});
-  $.post("https://output/c_spawn", JSON.stringify({
+  $.post("https://c_follow/c_spawn", JSON.stringify({
       model: Model,
       cont: Cont,
       armed: armed,
@@ -35,13 +35,13 @@ document.getElementById("submitButton").addEventListener("click", function(event
 document.getElementById("submitButton2").addEventListener("click", function(event) {
   event.preventDefault();
   $(".form-container").css({"display":"none"});
-  $.post("https://output/c_cancel", JSON.stringify({}));
+  $.post("https://c_follow/c_cancel", JSON.stringify({}));
 });
 
 document.getElementById("submitButton7").addEventListener("click", function(event) {
   event.preventDefault();
   $(".form-container2").css({"display":"none"});
-  $.post("https://output/c_cancel", JSON.stringify({}));
+  $.post("https://c_follow/c_cancel", JSON.stringify({}));
 });
 
 document.getElementById("submitButton3").addEventListener("click", function(event) {
@@ -51,7 +51,7 @@ document.getElementById("submitButton3").addEventListener("click", function(even
   let anim = document.getElementById("data5").value; 
 
   $(".form-container2").css({"display":"none"});
-  $.post("https://output/c_anim", JSON.stringify({
+  $.post("https://c_follow/c_anim", JSON.stringify({
       dist: dist,
       anim: anim
   }));
@@ -61,19 +61,19 @@ document.getElementById("submitButton4").addEventListener("click", function(even
   event.preventDefault();
   
   $(".form-container2").css({"display":"none"});
-  $.post("https://output/c_delete", JSON.stringify({}));
+  $.post("https://c_follow/c_delete", JSON.stringify({}));
 });
 
 document.getElementById("submitButton5").addEventListener("click", function(event) {
   event.preventDefault();
   
   $(".form-container2").css({"display":"none"});
-  $.post("https://output/c_kill", JSON.stringify({}));
+  $.post("https://c_follow/c_kill", JSON.stringify({}));
 });
 
 document.getElementById("submitButton6").addEventListener("click", function(event) {
   event.preventDefault();
   
   $(".form-container2").css({"display":"none"});
-  $.post("https://output/c_follow", JSON.stringify({}));
+  $.post("https://c_follow/c_follow", JSON.stringify({}));
 });

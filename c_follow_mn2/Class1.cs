@@ -73,11 +73,6 @@ namespace c_follow_mn2
                 }
 
                 Ped npc = await World.CreatePed((Model)Names[rand], coords + forward * 2);
-                //npc.Task.LookAt(player);
-                //npc.Task.FollowToOffsetFromEntity(player, (player.ForwardVector * 2), -1, 10);
-
-                //Natives.SetPedAsGroupMember(npc.Handle, Natives.GetPedGroupIndex(npc.Handle));
-                //Natives.SetPedCombatAbility(npc.Handle, 2);
                 peds[i] = npc;
             }
         }
@@ -92,11 +87,6 @@ namespace c_follow_mn2
             for (int i = 0; i < peds.Length; i++)
             {
                 Ped npc = await World.CreatePed((Model)Model, coords + forward * 2);
-                //npc.Task.LookAt(player);
-                //npc.Task.FollowToOffsetFromEntity(player, (player.ForwardVector * 2), -1, 10);
-
-                //Natives.SetPedAsGroupMember(npc.Handle, Natives.GetPedGroupIndex(npc.Handle));
-                //Natives.SetPedCombatAbility(npc.Handle, 2);
                 peds[i] = npc;
             }
         }
@@ -104,7 +94,6 @@ namespace c_follow_mn2
         foreach (Ped i in peds)
         {
             i.Task.FollowToOffsetFromEntity(player, forward * 2, -1, 10);
-            //Natives.SetPedAsGroupMember(i.Handle, Natives.GetPedGroupIndex(peds[0].Handle));
             Natives.SetPedRelationshipGroupHash(i.Handle, Natives.GetHashKey("SECURITY_GUARD"));
             Natives.SetPedCombatAbility(i.Handle, 2);
 
@@ -128,8 +117,8 @@ namespace c_follow_mn2
     private async void anim(dynamic data)
     {
         Natives.SetNuiFocus(false, false);
-        String dist = data.dist;
-        String anim = data.anim;
+        string dist = data.dist;
+        string anim = data.anim;
 
         while (!Natives.HasAnimDictLoaded(dist))
         {
@@ -192,38 +181,6 @@ namespace c_follow_mn2
         {
             Natives.SendNuiMessage("{\"action\":\"start\"}");
         }
-
     }
-
-    //private async void follow_anim(int source, List<object> args, string raw)
-    //{
-    //    String ani1 = "", ani2 = "";
-    //    if (args.Count >= 2)
-    //    {
-    //        ani1 = args[0].ToString();
-    //        ani2 = args[1].ToString();
-    //    }
-    //    if (ani1 == "" && ani2 == "")
-    //    {
-    //        Ped player = Game.Player.Character;
-    //        foreach (Ped i in peds)
-    //        {
-    //            i.Task.ClearAllImmediately();
-    //            i.Task.FollowToOffsetFromEntity(player, (player.ForwardVector * 2), -1, 10);
-    //        }
-    //    }
-    //    while (!Natives.HasAnimDictLoaded(ani1))
-    //    {
-    //        Natives.RequestAnimDict(ani1);
-    //        await BaseScript.Delay(100);
-    //    }
-    //    AnimationFlags flags = AnimationFlags.Loop | AnimationFlags.CancelableWithMovement;
-    //    foreach (Ped i in peds)
-    //    {
-    //        i.Task.ClearAllImmediately();
-    //        i.Task.PlayAnimation(ani1, ani2, -1, -1, flags);
-    //    }
-
-    //}
-}
+  }
 }

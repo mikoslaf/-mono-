@@ -13,7 +13,7 @@ files {
 
 client_scripts {
     'CitizenFX.Core.dll',
-    'CitizenFX.FiveM.Native.dll',
     'CitizenFX.FiveM.dll',
+    'CitizenFX.FiveM.Native.dll',
     'c_follow_mn2.net.dll'
 }
