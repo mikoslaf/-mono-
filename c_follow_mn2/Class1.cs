@@ -182,5 +182,5 @@ namespace c_follow_mn2
             Natives.SendNuiMessage("{\"action\":\"start\"}");
         }
     }
-  }
+    }
 }
